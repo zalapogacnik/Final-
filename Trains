@@ -1,1 +1,5 @@
+import urllib.request
+infile = urllib.request.urlopen('https://api.tfl.gov.uk/StopPoint/490015107S/arrivals')
+arrival_times_json = infile.read().decode()
+print(arrival_times_json)
 
