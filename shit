@@ -1,0 +1,24 @@
+import urllib.request
+import json
+import os.path
+
+import urllib.request
+
+
+class TransportationAPP:
+    def __init__(self):
+        self.Bus_stops = ["490015107E","490015107N","490015107S","490015107W"]
+
+    def get_Bus_arrival_times(self):
+
+        bus_time=[]
+        for bus_stop_id in self.Bus_stops:
+            east = urllib.request.urlopen("https://tfl.gov.uk/bus/stop/490007391E/grays-inn-road")
+            east_Bus_arrivals = east.read().decode()
+            def __init__(self):
+                self.Bus_stops = ["490015107E","490015107N","490015107S","490015107W"]
+                self.bus_id = url["id"]
+                self.vehicle_id = url["vehicleId"]
+                self.arrival_time = url["arrivalDateTime"]
+                bus_time.append("stop ID:"+ self.bus_id+"Bus number:"+self.vehicle_id+"Arrivals:"+self.arrival_time)
+        return bus_time
