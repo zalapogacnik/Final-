@@ -1,6 +1,19 @@
 import urllib.request
-infile = urllib.request.urlopen('https://api.tfl.gov.uk/StopPoint/490015107S/arrivals')
-arrival_times_json = infile.read().decode()
-print(arrival_times_json)
-for arrival_dict in arrivals:
-    print(arrival_dict["destinationName"])
+import json
+import os.path
+
+import urllib.request
+
+
+class TransportationAPP:
+    def __init__(self):
+        self.Bus_stops = ["490015107E","490015107N","490015107S","490015107W"]
+        self.arrival_times = json.loads(arrival_times_json)
+
+    def get_Bus_arrival_times(self):
+        bus_time=[]
+        for bus_stop_id in self.Bus_stops:
+           url = urllib.request.urlopen("https://api.tfl.gov.uk/StopPoint/"+{bus_id}+"arrivals")
+            east_bus_arrival_times_json = east.read().decode()
+            for bus_time.append("stop ID:"+bus_stop_id+"Bus number:"+url["vehicleId"])
+    return bus_time
